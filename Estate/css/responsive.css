@@ -1,0 +1,321 @@
+
+
+
+html{
+    overflow-x: hidden;
+}
+body{
+    overflow-x: hidden;
+}
+
+@media(max-width:48em)
+{
+    .mobile-navbar-btn{
+     display: block;  
+     box-shadow: 50px 50px; 
+     z-index: 10000;
+    }
+
+    
+
+    .header{
+        position: relative;
+    }
+
+    .navbar{
+        z-index: 9999;
+        height: 100vh;
+        width: 100%;
+        background-color: antiquewhite;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateX(100%);
+        transition: all 0.5s linear;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+    }
+
+
+    .navbar-list{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    
+
+    .active .navbar{
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+    .active .mobile-navbar-btn .mobile-nav-icon[name="close-outline"]
+    {
+        display: block;
+    }
+
+    .active .mobile-navbar-btn .mobile-nav-icon[name="menu-outline"]
+    {
+        display: none;
+    }
+
+   
+
+
+    /*now*/
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-form, .contact-details {
+        margin-bottom: 20px;
+    }    
+    
+    
+    
+    /******Footer Start*************/
+    #footer {
+        background-color: #333;
+        height: 28em;
+        color: #fff;
+        padding: 30px 0;
+    }
+    
+    
+    .footer-container {
+        flex-direction: column;
+    }
+
+    .footer-column {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+
+    #page1{
+        /* background-color: aqua; */
+    /* margin-top: 20px; */
+    
+    background: url(../images/n1.png);
+    height: 30vh;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    animation: changeImage 20s /*duration timing-function*/ 2s ease infinite;
+    
+    }
+    
+    /* Added keyframes for sliding animation */
+    
+    @keyframes changeImage {
+    0%{
+        background: url(../images/n1.png) no-repeat;
+        background-size: 100% 100%;
+    }
+    50%{
+        background: url(../images/page1_img2.jpg) no-repeat;
+        background-size: 100% 100%;
+    }
+    100%{
+        background: url(../images/page1_img3.jpg) no-repeat;
+        background-size: 100% 100%;
+    }
+    }
+    
+    
+    #page1 h1{
+    font-size: 2.5rem;
+    letter-spacing: -2px;
+    line-height: 10vh;
+    position: absolute;
+    /* border: 6px solid rgb(0, 0, 0);  */
+    padding-right: 18vw;
+    background:linear-gradient(to right , rgb(255, 255, 255),#ff9999 45%, #ffffff);
+    background-size: 150% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient 2s linear infinite;
+    }
+    
+    @keyframes gradient{
+    0%{background-position:0% 75%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 70%;}
+    
+    }
+    
+    /*animation*/
+    
+    #page1 .typing-container {
+    /* margin: 100px auto; */
+    padding-top: 35vh;
+    width: 90%;
+    text-align: left;
+    }
+    
+    #page1 .typing-text {
+    font-size: 2.5rem;
+    /* color: #333; */
+    background:linear-gradient(to left , rgb(255, 255, 255),#000000 35%, #ffffff);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient 2s linear infinite;
+    
+    
+    border-right: 2px solid #333; /* Cursor effect */
+    white-space: nowrap; /* Prevent text wrapping */
+    overflow: hidden; /* Hide overflow text */
+    /* animation: typing 10s steps(10, end); Typing animation */
+    }
+    
+    @keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+    }
+    
+    
+    
+    
+    
+    
+    
+    /*********end********/
+    
+    
+    
+    
+    
+    
+    
+    
+    /******about-start**********/
+    
+    #page2{
+        height: 150vh;
+        width: 100%;
+        overflow: hidden;
+        }
+    
+        #page2 .about-us img{
+        /* background-color: aqua; */
+        height: 300px; 
+         width: 300px;
+         margin-left: 15vw;
+         justify-content: center;
+         object-position: center;
+         text-align: center;
+         position: relative;
+         }
+    
+    
+        #page2 .about-us .upImage{
+        /* background-color: blue; */
+        position: absolute;
+        z-index: 99;
+        margin-top: -15vh;
+        margin-left: -20vw;
+        }
+    
+        #my-image {
+        /* background-color: rgb(73, 178, 73); */
+        width: 350px;
+        height: 350px;
+        margin-top: -80px;
+        margin-left: 5px;
+        }
+    
+        #page2 .container {
+        height: 90vh;
+        width: 100%;
+        /* margin:  auto; */
+        padding: 2.5vh;
+        text-align: justify;
+        /* padding-top: 0vh; */
+        }
+    
+        #page2 p {
+        margin-bottom: 5px;
+    }
+    
+    /*about-end*/
+    
+   
+    
+    /*****all heading start*******/
+    
+    
+    
+    .section-title{
+        text-align: center;
+        padding: 40px 0;
+        position: relative;
+        }
+    
+        .section-title h2 {
+        padding-top: 1px;
+        font-size: 35px;
+        font-weight: 700;
+        text-transform: uppercase;
+        margin-bottom: 5px;
+        padding-bottom: 0;
+        color: #1a0101;
+        position: relative;
+        z-index: 2;
+        }
+    
+        .section-title span {
+        position: absolute;
+        top: 50px;
+        color: #e2e4ea;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        font-weight: 700;
+        font-size: 42px;
+        text-transform: uppercase;
+        line-height: 0;
+        }
+    
+        .section-title p {
+        font-size: 20px;
+        margin-bottom: 0;
+        position: relative;
+        z-index: 2;
+    }
+
+    .icons{
+    
+        height: 35vh;
+        /* width: 30vw; */
+        /* border: 1px solid red; */
+        border-radius: 40px;
+        flex-basis: 50%;
+        
+    }
+    #page4{
+        height: 170vh;
+    }
+
+
+}
+
+
+
+
+
+/******Footer End*************/
+
+
+
+/* } */
